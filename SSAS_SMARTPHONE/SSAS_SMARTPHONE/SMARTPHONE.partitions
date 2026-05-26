@@ -1,0 +1,85 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="46e0d2d2-13f2-49fb-bccb-8ac27b96b38f" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>SMARTPHONE</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Dim Mental</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="14e0ffb0-814d-472d-a3ef-b9423b647a45">
+          <ID>Dim Mental</ID>
+          <Name>Dim Mental</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="388d5e92-c131-41ee-bbe6-94ad3b3795ad">
+            <DataSourceViewID>SMARTPHONE</DataSourceViewID>
+            <TableID>dbo_Dim_Mental</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Dim Time</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="cc347f05-511d-482a-959f-dde3969f155e">
+          <ID>Dim Time</ID>
+          <Name>Dim Time</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="64fd2712-8999-49a5-ae41-d9b144f256ef">
+            <DataSourceViewID>SMARTPHONE</DataSourceViewID>
+            <TableID>dbo_Dim_Time</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Dim User</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="a2662df5-6f92-4900-8064-f5c1301af397">
+          <ID>Dim User</ID>
+          <Name>Dim User</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="78b4456f-2aa6-4189-b87e-2cd039f14f8a">
+            <DataSourceViewID>SMARTPHONE</DataSourceViewID>
+            <TableID>dbo_Dim_User</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact User Behavior</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="27a80510-4412-4fa2-9817-e648c34ab36e">
+          <ID>Fact User Behavior</ID>
+          <Name>Fact User Behavior</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="1372e7fb-a6e8-46e8-8a00-ce427d5680e7">
+            <DataSourceViewID>SMARTPHONE</DataSourceViewID>
+            <TableID>dbo_Fact_UserBehavior</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

@@ -1,0 +1,142 @@
+﻿//Câu 1: Thống kê tổng số giờ sử dụng thiết bị (Daily Screen Time) theo từng nhóm tuổi.
+SELECT [Measures].[Daily Screen Time Hours] ON 0,
+[Dim User].[Age].[Age] ON 1
+FROM [DWH Smartphone Usage]
+
+//Câu 2: Tổng số giờ sử dụng mạng xã hội và chơi game phân theo giới tính.
+SELECT { [Measures].[Social Media Hours],[Measures].[Gaming Hours]} ON 0,
+[Dim User].[Gender].[Gender]ON 1
+FROM [DWH Smartphone Usage]
+
+//Câu 3: Tổng giờ sử dụng theo tháng
+SELECT [Measures].[Daily Screen Time Hours] ON 0,
+[Dim Time].[Month].[Month] ON 1
+FROM [DWH Smartphone Usage]
+
+//Câu 4: Thống kê số giờ sử dụng thiết bị của những người bị nghiện 
+SELECT [Measures].[Daily Screen Time Hours] ON 0
+FROM[DWH Smartphone Usage]
+WHERE ([Dim Mental].[Addicted Label].&[1])
+
+//Câu 5:So sánh mức độ Stress (Stress Level) dựa trên các cấp độ nghiện (Addiction Level).
+SELECT [Measures].[Daily Screen Time Hours] ON 0,
+NON EMPTY ([Dim Mental].[Stress Level].[Stress Level] *
+           [Dim Mental].[Addiction Level].[Addiction Level]) ON 1
+FROM [DWH Smartphone Usage]
+
+//Câu 6: Phân tích sự ảnh hưởng đến học tập (Academic Work Impact) theo giới tính.
+SELECT [Measures].[Work Study Hours] ON 0,
+NON EMPTY ([Dim User].[Gender].[Gender] *
+ 		[Dim Mental].[Academic Work Impact].[Academic Work Impact]) ON 1
+FROM [DWH Smartphone Usage]
+
+//Câu 7: Tìm 5 ngày có tổng thời gian sử dụng thiết bị cao nhất.
+SELECT
+    [Measures].[Daily Screen Time Hours] ON 0,
+    TOPCOUNT(
+        [Dim Time].[Date].Members,
+        5,
+        [Measures].[Daily Screen Time Hours]
+    ) ON 1
+FROM [DWH Smartphone Usage]
+
+//Câu 8: Tổng giờ ngủ theo nhóm tuổi.
+SELECT [Measures].[Sleep Hours] ON 0,
+[Dim User].[Age].[Age] ON 1
+FROM [DWH Smartphone Usage]
+
+//Câu 9: So sánh thời gian sử dụng điện thoại giữa các giới tính.
+SELECT [Measures].[Daily Screen Time Hours] ON 0,
+ 		[Dim User].[Gender].[Gender] ON 1
+FROM [DWH Smartphone Usage]
+
+//Câu 10: Tỷ lệ phần trăm thời gian chơi game trên tổng thời gian sử dụng theo cấp độ nghiện.
+WITH MEMBER [Measures].[Gaming Percentage] AS ([Measures].[Gaming Hours] / [Measures].[Daily Screen Time Hours]) * 100
+
+SELECT [Measures].[Gaming Percentage] ON 0,
+ 	[Dim Mental].[Addiction Level].[Addiction Level] ON 1
+FROM [DWH Smartphone Usage]
+
+//Câu 11: Tổng số giờ học/làm việc theo từng nhóm tuổi
+SELECT 
+    [Measures].[Work Study Hours] ON COLUMNS,
+    NON EMPTY [Dim User].[Age].[Age] ON ROWS
+FROM [DWH Smartphone Usage]
+
+//Câu 12: So sánh giờ ngủ và giờ sử dụng thiết bị theo giới tính
+SELECT 
+    {
+        [Measures].[Sleep Hours],
+        [Measures].[Daily Screen Time Hours]
+    } ON COLUMNS,
+    NON EMPTY [Dim User].[Gender].[Gender] ON ROWS
+FROM [DWH Smartphone Usage]
+
+//Câu 13: Tổng giờ sử dụng mạng xã hội theo cấp độ stress
+SELECT 
+    [Measures].[Social Media Hours] ON COLUMNS,
+    NON EMPTY [Dim Mental].[Stress Level].[Stress Level] ON ROWS
+FROM [DWH Smartphone Usage]
+
+//Câu 14: Tổng giờ chơi game theo mức độ ảnh hưởng học tập/công việc
+SELECT 
+    [Measures].[Gaming Hours] ON COLUMNS,
+    NON EMPTY [Dim Mental].[Academic Work Impact].[Academic Work Impact] ON ROWS
+FROM [DWH Smartphone Usage]
+
+
+
+
+
+//Câu 15: Tìm 5 nhóm tuổi có tổng thời gian chơi game cao nhất
+SELECT 
+    [Measures].[Gaming Hours] ON COLUMNS,
+    TOPCOUNT(
+        [Dim User].[Age].MEMBERS,
+        5,
+        [Measures].[Gaming Hours]
+    ) ON ROWS
+FROM [DWH Smartphone Usage]
+
+//Câu 16: Tính tỷ lệ thời gian mạng xã hội trên tổng thời gian sử dụng thiết bị
+
+WITH 
+MEMBER [Measures].[Social Media Percentage] AS
+    IIF(
+        [Measures].[Daily Screen Time Hours] = 0,
+        NULL,
+        ([Measures].[Social Media Hours] / [Measures].[Daily Screen Time Hours]) * 100
+    ),
+    FORMAT_STRING = "0.00"
+
+SELECT 
+    [Measures].[Social Media Percentage] ON COLUMNS,
+    NON EMPTY [Dim User].[Gender].[Gender] ON ROWS
+FROM [DWH Smartphone Usage]
+//Câu 17: So sánh thời gian học/làm việc giữa người nghiện và không nghiện
+SELECT 
+    [Measures].[Work Study Hours] ON COLUMNS,
+    NON EMPTY [Dim Mental].[Addicted Label].[Addicted Label] ON ROWS
+FROM [DWH Smartphone Usage]
+//Câu 18: Phân tích giờ ngủ theo cấp độ nghiện Internet/điện thoại
+SELECT 
+    [Measures].[Sleep Hours] ON COLUMNS,
+    NON EMPTY [Dim Mental].[Addiction Level].[Addiction Level] ON ROWS
+FROM [DWH Smartphone Usage]
+
+//Câu 19: Tổng thời gian sử dụng thiết bị theo quý
+SELECT 
+    [Measures].[Daily Screen Time Hours] ON COLUMNS,
+    NON EMPTY [Dim Time].[Quarter].[Quarter] ON ROWS
+FROM [DWH Smartphone Usage]
+//Câu 20: Phân tích stress theo giới tính và cấp độ nghiện
+
+SELECT 
+    [Measures].[Daily Screen Time Hours] ON COLUMNS,
+    NON EMPTY 
+    (
+        [Dim User].[Gender].[Gender] *
+        [Dim Mental].[Stress Level].[Stress Level] *
+        [Dim Mental].[Addiction Level].[Addiction Level]
+    ) ON ROWS
+FROM [DWH Smartphone Usage]

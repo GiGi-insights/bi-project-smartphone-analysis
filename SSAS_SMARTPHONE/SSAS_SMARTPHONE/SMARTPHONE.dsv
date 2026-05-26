@@ -1,0 +1,195 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="7ea41602-c489-4190-a4d0-527638c8fcde" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>SMARTPHONE</ID>
+  <Name>SMARTPHONE</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:NameMatchingCriteria</Name>
+      <Value>1</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>SMARTPHONE</DataSourceID>
+  <Schema>
+    <xs:schema id="SMARTPHONE" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="SMARTPHONE" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="c08a13a3-72cf-4ef2-aba0-c0d6c22c494b">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Dim_Mental" msprop:DbTableName="Dim_Mental" msprop:FriendlyName="Dim_Mental" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="f9223b1d-b438-4fe7-b41e-8288db5ebd0d">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="stress_level" msprop:FriendlyName="stress_level" msprop:DbColumnName="stress_level" msprop:design-time-name="d880ab20-aa9e-4543-8aa8-0a2b49319b07" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="academic_work_impact" msprop:FriendlyName="academic_work_impact" msprop:DbColumnName="academic_work_impact" msprop:design-time-name="d160038c-8c90-406b-87e8-28e7928e05a3" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="addiction_level" msprop:FriendlyName="addiction_level" msprop:DbColumnName="addiction_level" msprop:design-time-name="94329053-dcd0-41fe-90c2-4c9f070d31d3" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MentalKey" msprop:FriendlyName="MentalKey" msprop:DbColumnName="MentalKey" msprop:design-time-name="a572afa5-11f3-403c-9584-4a8576c11ab4" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Time" msprop:DbTableName="Dim_Time" msprop:FriendlyName="Dim_Time" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="9150894e-9a9b-4c90-ab0c-5d06e89cfdfc">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="MONTH" msprop:FriendlyName="MONTH" msprop:DbColumnName="MONTH" msprop:design-time-name="7ebf8ac4-d9a5-4a13-8174-99abb5bb29ab" type="xs:int" minOccurs="0" />
+                  <xs:element name="QUATER" msprop:FriendlyName="QUATER" msprop:DbColumnName="QUATER" msprop:design-time-name="365cca85-24fa-44ad-a8fd-fb7123510186" type="xs:int" minOccurs="0" />
+                  <xs:element name="YEAR" msprop:FriendlyName="YEAR" msprop:DbColumnName="YEAR" msprop:design-time-name="ed755e38-eeec-4302-afc0-05c77de23ed3" type="xs:int" minOccurs="0" />
+                  <xs:element name="DATE" msprop:FriendlyName="DATE" msprop:DbColumnName="DATE" msprop:design-time-name="8c3e3a4a-fa67-4920-9659-66fea8ef09e5" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="TimeKey" msprop:FriendlyName="TimeKey" msprop:DbColumnName="TimeKey" msprop:design-time-name="7c5a953b-8f2e-4209-b16e-72006a6e41b1" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_User" msprop:DbTableName="Dim_User" msprop:FriendlyName="Dim_User" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="258a286f-5341-40d6-8348-42d178eb814b">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="user_id" msprop:FriendlyName="user_id" msprop:DbColumnName="user_id" msprop:design-time-name="1daad37f-de5c-4d67-a86e-0bde5447a112" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="age" msprop:FriendlyName="age" msprop:DbColumnName="age" msprop:design-time-name="7437480f-c01f-48f6-9332-49008daf1912" type="xs:double" minOccurs="0" />
+                  <xs:element name="gender" msprop:FriendlyName="gender" msprop:DbColumnName="gender" msprop:design-time-name="7a982e51-d95b-4221-adb2-523647c58470" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="UserKey" msprop:FriendlyName="UserKey" msprop:DbColumnName="UserKey" msprop:design-time-name="bfc64f6a-75fd-4900-8dc5-7975e29ba946" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Fact_UserBehavior" msprop:DbTableName="Fact_UserBehavior" msprop:FriendlyName="Fact_UserBehavior" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="593c6b29-ef73-4b32-86d1-57276f814afd">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TimeKey" msprop:FriendlyName="TimeKey" msprop:DbColumnName="TimeKey" msprop:design-time-name="a11153e2-3883-4ed3-a590-cb21b7bd0dc3" type="xs:int" minOccurs="0" />
+                  <xs:element name="UserKey" msprop:FriendlyName="UserKey" msprop:DbColumnName="UserKey" msprop:design-time-name="a5f6c6af-24ca-4dd9-b705-ba130b136bae" type="xs:int" minOccurs="0" />
+                  <xs:element name="MentalKey" msprop:FriendlyName="MentalKey" msprop:DbColumnName="MentalKey" msprop:design-time-name="061a7cb4-438c-4250-adac-050bb9cb20b2" type="xs:int" minOccurs="0" />
+                  <xs:element name="weekend_screen_time" msprop:FriendlyName="weekend_screen_time" msprop:DbColumnName="weekend_screen_time" msprop:design-time-name="9b6f7484-3403-4173-86ab-a0fc6b589a96" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="addicted_label" msprop:FriendlyName="addicted_label" msprop:DbColumnName="addicted_label" msprop:design-time-name="9313808c-6990-4751-98aa-63e38a2c0b51" type="xs:double" minOccurs="0" />
+                  <xs:element name="sleep_hours" msprop:FriendlyName="sleep_hours" msprop:DbColumnName="sleep_hours" msprop:design-time-name="4df72205-dd2e-4fb8-a6c4-c46dfe1657ab" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="work_study_hours" msprop:FriendlyName="work_study_hours" msprop:DbColumnName="work_study_hours" msprop:design-time-name="1143778b-fe11-4be5-8a02-1913105f204b" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="gaming_hours" msprop:FriendlyName="gaming_hours" msprop:DbColumnName="gaming_hours" msprop:design-time-name="79b97538-fc1e-4b66-b20e-49d851666781" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="daily_screen_time_hours" msprop:FriendlyName="daily_screen_time_hours" msprop:DbColumnName="daily_screen_time_hours" msprop:design-time-name="720b77e7-ecf6-41d6-9a4c-c6a3bac66e07" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="social_media_hours" msprop:FriendlyName="social_media_hours" msprop:DbColumnName="social_media_hours" msprop:design-time-name="46cff7ca-4b54-4925-b871-203d0d96740b" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FactKey" msprop:FriendlyName="FactKey" msprop:DbColumnName="FactKey" msprop:design-time-name="30284a83-b919-4e01-b695-fd60f68b1c10" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Mental" />
+          <xs:field xpath="MentalKey" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Time_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Time" />
+          <xs:field xpath="TimeKey" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_User_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_User" />
+          <xs:field xpath="UserKey" />
+        </xs:unique>
+        <xs:unique name="dbo_Fact_UserBehavior_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Fact_UserBehavior" />
+          <xs:field xpath="FactKey" />
+        </xs:unique>
+      </xs:element>
+      <xs:annotation>
+        <xs:appinfo>
+          <msdata:Relationship name="Fact_UserBehavior-Dim_Time" msdata:parent="dbo_Dim_Time" msdata:child="dbo_Fact_UserBehavior" msdata:parentkey="TimeKey" msdata:childkey="TimeKey" />
+          <msdata:Relationship name="Fact_UserBehavior-Dim_User" msdata:parent="dbo_Dim_User" msdata:child="dbo_Fact_UserBehavior" msdata:parentkey="UserKey" msdata:childkey="UserKey" />
+          <msdata:Relationship name="Fact_UserBehavior-Dim_Mental" msdata:parent="dbo_Dim_Mental" msdata:child="dbo_Fact_UserBehavior" msdata:parentkey="MentalKey" msdata:childkey="MentalKey" />
+        </xs:appinfo>
+      </xs:annotation>
+    </xs:schema>
+    <SMARTPHONE xmlns="" />
+  </Schema>
+</DataSourceView>

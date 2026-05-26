@@ -1,0 +1,75 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>SSAS_SMARTPHONE</Database>
+    <Server>localhost\SSAS_TT</Server>
+    <ConnectionString>Data Source=localhost\SSAS_TT;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>xsSpF4kMmTgUSO4pHtDHEk4OXcs=24/04/2026 7:01:06 CH24/04/2026 7:01:06 CH</TimeStamp>
+        <ID>
+          <String>SMARTPHONE</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>x0l8pKCVhdUaVMSlauiFDlEf41o=24/04/2026 7:03:26 CH24/04/2026 7:03:26 CH</TimeStamp>
+        <ID>
+          <String>SMARTPHONE</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>dx5irhO+JiOur0u77Pz+acRmoGM=24/04/2026 7:06:44 CH24/04/2026 7:04:55 CH</TimeStamp>
+        <ID>
+          <String>Dim Mental</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>JLEvTRSycCSBje3BO3VveZSWhaE=24/04/2026 7:06:44 CH24/04/2026 7:04:55 CH</TimeStamp>
+        <ID>
+          <String>Dim Time</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>eEFxjayZ6FNwQxLSJ7R0bJbEmt0=24/04/2026 7:06:44 CH24/04/2026 7:04:55 CH</TimeStamp>
+        <ID>
+          <String>Dim User</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>pSTxaeeGIQ9wR5vd22Tlnm3ZdEE=25/04/2026 2:36:38 CH24/04/2026 7:04:55 CHGIIPQKGbr/vfnoECRAYXJQhzYIQ=24/04/2026 7:04:55 CH24/04/2026 7:04:55 CH</TimeStamp>
+        <ID>
+          <String>SMARTPHONE</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>WoDPA/vg7tiicNTuuzyBQp0I2No=24/04/2026 6:59:59 CH24/04/2026 6:59:58 CH</TimeStamp>
+      <ID>
+        <String>SSAS_SMARTPHONE</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2026-04-25T07:36:51.26Z</LastDeployed>
+</DeploymentSnapshot>
